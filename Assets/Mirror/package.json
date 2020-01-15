@@ -1,0 +1,12 @@
+{
+  "name": "com.vis2k.mirror",
+  "displayName": "Mirror Networking",
+  "version": "6.7.8",
+  "unity": "2019.2",
+  "unityRelease": "0a10",
+  "description": "A community replacement for Unity's abandoned UNET Networking System. https://github.com/vis2k/Mirror",
+  "keywords": [
+    "Networking",
+    "UNET"
+  ]
+}
