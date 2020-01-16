@@ -39,6 +39,8 @@ namespace Mirror
 
         void OnGUI()
         {
+			GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, Vector3.one * 3);
+
             if (!showGUI)
                 return;
 
@@ -60,6 +62,17 @@ namespace Mirror
                     GUILayout.BeginHorizontal();
                     if (GUILayout.Button("LAN Client"))
                     {
+                        manager.StartClient();
+                    }
+
+                    if(GUILayout.Button("LAN iPhone 232"))
+                    {
+                        manager.networkAddress = "192.168.0.232";
+                        manager.StartClient();
+                    }
+                    if(GUILayout.Button("LAN iPad Pro 231"))
+                    {
+                        manager.networkAddress = "192.168.0.231";
                         manager.StartClient();
                     }
                     manager.networkAddress = GUILayout.TextField(manager.networkAddress);
@@ -123,6 +136,8 @@ namespace Mirror
             }
 
             GUILayout.EndArea();
+
+            GUI.matrix = Matrix4x4.identity;
         }
     }
 }
