@@ -22,6 +22,10 @@ namespace Mirror
         /// </summary>
         public bool showGUI = true;
 
+        public void SetShow(bool on) {
+            showGUI = on;
+        }
+
         /// <summary>
         /// The horizontal offset in pixels to draw the HUD runtime GUI at.
         /// </summary>
